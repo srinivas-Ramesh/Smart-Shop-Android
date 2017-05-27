@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_screen_background">
+
+    <TextView
+        android:id="@+id/recommendation_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/recommendations"
+        android:textColor="#EEFFFFFF"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+    <ListView
+        android:layout_margin="10dp"
+        android:id="@+id/recommendation_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommendation_title"/>
+</RelativeLayout>

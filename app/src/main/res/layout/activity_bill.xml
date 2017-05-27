@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_screen_background">
+
+    <TextView
+        android:id="@+id/bill_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:background="@color/itemListBackground"
+        android:gravity="center_horizontal"
+        android:text="@string/bill_page_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/billing_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_below="@id/bill_text"
+        android:layout_margin="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/amount_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/billing_list_view"
+        android:layout_margin="5dp"
+        android:background="#A03F51B5"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/total_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:text="@string/total_amount_text"
+            android:textColor="@color/textColor"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/total_amount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="30"
+            android:textColor="@color/textColor"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/rs_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/total_amount_value"
+            android:text="Rs."
+            android:textColor="@color/textColor"
+            android:textSize="30dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginTop="5dp"
+        android:id="@+id/pay_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="PAY"
+        android:textColor="@color/textColor"
+        android:textSize="20dp"
+        android:layout_below="@id/amount_relative_layout"/>
+</RelativeLayout>

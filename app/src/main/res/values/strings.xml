@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Smart Shopping</string>
+    <string name="items_page_title">Shopping Cart</string>
+    <string name="recommendations">Recommedations</string>
+    <string name="bill_button">Bill</string>
+    <string name="bill_page_title">BILL</string>
+    <string name="total_amount_text">Total Amount</string>
+</resources>

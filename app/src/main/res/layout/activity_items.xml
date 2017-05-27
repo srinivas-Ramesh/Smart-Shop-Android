@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_screen_background">
+
+    <RelativeLayout
+        android:id="@+id/shopping_cart_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/shopping_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/items_page_title"
+            android:textColor="#EEFFFFFF"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/update_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_autorenew_black_24dp"
+            android:onClick="onClickOfUpdate"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/items_list"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_below="@id/shopping_cart_relativeLayout"
+        android:layout_margin="5dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/items_list">
+
+        <Button
+            android:id="@+id/offers_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickOfOffers"
+            android:text="@string/recommendations"
+            android:textColor="@color/textColor" />
+
+        <Button
+            android:id="@+id/bill_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@color/colorPrimary"
+            android:onClick="onClickOfBill"
+            android:text="@string/bill_button"
+            android:textColor="@color/textColor" />
+    </RelativeLayout>
+</RelativeLayout>
+
