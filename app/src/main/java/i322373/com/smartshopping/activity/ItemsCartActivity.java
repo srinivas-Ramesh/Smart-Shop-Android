@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import i322373.com.smartshopping.R;
 import i322373.com.smartshopping.adapter.ItemsAdapter;
 import i322373.com.smartshopping.dataModel.ItemDataModel;
+import i322373.com.smartshopping.service.ItemIntentService;
 import i322373.com.smartshopping.service.RetrieveItems;
 
 public class ItemsCartActivity extends AppCompatActivity {
@@ -33,19 +34,12 @@ public class ItemsCartActivity extends AppCompatActivity {
         adapter = new ItemsAdapter(itemsDataModelList, getApplicationContext());
         ItemListView.setAdapter(adapter);
 
-        //update the list with existing items
-        updateItems = new RetrieveItems();
-        updateItems.execute();
-        updateItemsDataModelList(RetrieveItems.retrievedItems);
-
+        startService(new Intent(this,ItemIntentService.class));
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        updateItems = new RetrieveItems();
-        updateItems.execute();
-        updateItemsDataModelList(RetrieveItems.retrievedItems);
     }
 
     /**
@@ -94,5 +88,6 @@ public class ItemsCartActivity extends AppCompatActivity {
         updateItemsDataModelList(RetrieveItems.retrievedItems);
         updateItems.execute();
     }
+
 
 }

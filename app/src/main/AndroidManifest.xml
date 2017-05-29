@@ -21,6 +21,9 @@
         <activity android:name=".activity.BillingActivity" />
         <activity android:name=".activity.OfferActivity" />
 
+        <service
+            android:name=".service.ItemIntentService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
