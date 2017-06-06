@@ -1,11 +1,15 @@
 package i322373.com.smartshopping.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,6 +21,7 @@ import i322373.com.smartshopping.service.RetrieveItems;
 
 public class ItemsCartActivity extends AppCompatActivity {
 
+    private static boolean backgroundService_flag = false;
     public static ArrayList<ItemDataModel> itemsDataModelList;
     private ListView ItemListView;
     public static ItemsAdapter adapter;
@@ -34,12 +39,24 @@ public class ItemsCartActivity extends AppCompatActivity {
         adapter = new ItemsAdapter(itemsDataModelList, getApplicationContext());
         ItemListView.setAdapter(adapter);
 
-        startService(new Intent(this,ItemIntentService.class));
+        if(isNetworkAvailable()) {
+            startService(new Intent(this, ItemIntentService.class));
+            backgroundService_flag = true;
+        }
+        else{
+            Toast.makeText(this,"Please enable Internet connection",Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        if(isNetworkAvailable()){
+            if(!backgroundService_flag){
+                startService(new Intent(this,ItemIntentService.class));
+                backgroundService_flag = true;
+            }
+        }
     }
 
     /**
@@ -89,5 +106,13 @@ public class ItemsCartActivity extends AppCompatActivity {
         updateItems.execute();
     }
 
-
+    /**
+     * check if internet connectivity is present
+     */
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 }
