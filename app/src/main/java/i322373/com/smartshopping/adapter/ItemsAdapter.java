@@ -33,9 +33,10 @@ public class ItemsAdapter extends ArrayAdapter<ItemDataModel> {
 
     // View lookup cache
     private static class ViewHolder {
-        TextView itemName;
-        TextView itemPrice;
+        TextView  itemName;
+        TextView  itemPrice;
         ImageView itemImage;
+        TextView  location;
     }
 
     @NonNull
@@ -53,11 +54,12 @@ public class ItemsAdapter extends ArrayAdapter<ItemDataModel> {
         viewHolder.itemName = (TextView) result.findViewById(R.id.item_name);
         viewHolder.itemPrice = (TextView) result.findViewById(R.id.item_cost);
         viewHolder.itemImage = (ImageView) result.findViewById(R.id.item_image);
+        viewHolder.location  = (TextView) result.findViewById(R.id.item_location);
 
         viewHolder.itemName.setText(dataModel.getName());
         viewHolder.itemPrice.setText(dataModel.getPrice());
         viewHolder.itemImage.setImageResource(dataModel.getImageResource());
-
+        viewHolder.location.setText(dataModel.getLocation());
         // Return the completed view to render on screen
         return result;
     }

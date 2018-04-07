@@ -24,7 +24,8 @@ public class RetrieveItems extends AsyncTask {
     public volatile static ArrayList<ItemDataModel> retrievedOffersItems = new ArrayList<>();
 
     JSONArray JsonResponseArray;
-    private String urlAsString = "https://smartshopi322373trial.hanatrial.ondemand.com/smartshop/app/items/all";
+    private String urlAsString = "https://smartshopp1941546332trial.hanatrial.ondemand.com/smartshop/app/items/all";
+    //https://smartshopi322373trial.hanatrial.ondemand.com
 
 
     @Override
@@ -118,6 +119,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Dove");
                         item.setImageResource(R.drawable.dove);
                         item.setPrice("53");
+                        item.setLocation("F1.S2.R3");
                         itemsList.add(item);
                         break;
                     case 4199131:
@@ -125,6 +127,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Pepsi");
                         item.setImageResource(R.drawable.pepsi);
                         item.setPrice("20");
+                        item.setLocation("F1.S4.R1");
                         itemsList.add(item);
                         break;
                     case 4204131:
@@ -132,6 +135,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Duracell");
                         item.setImageResource(R.drawable.duracell_logo);
                         item.setPrice("10");
+                        item.setLocation("F2.S5.R1");
                         itemsList.add(item);
                         break;
                     case 4209131:
@@ -139,6 +143,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("DairyMilk Silk");
                         item.setImageResource(R.drawable.silk);
                         item.setPrice("120");
+                        item.setLocation("F1.S7.R2");
                         itemsList.add(item);
                         break;
                     case 4214131:
@@ -146,6 +151,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Oceans");
                         item.setImageResource(R.drawable.oceans_juice);
                         item.setPrice("35");
+                        item.setLocation("F1.S7.R1");
                         itemsList.add(item);
                         break;
                     case 4219131:
@@ -153,6 +159,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Wilson Ball");
                         item.setImageResource(R.drawable.wilson);
                         item.setPrice("100");
+                        item.setLocation("F2.S3.R3");
                         itemsList.add(item);
                         break;
                     default:
@@ -201,6 +208,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Pears");
                         item.setImageResource(R.drawable.pears);
                         item.setPrice("30");
+                        item.setLocation("F1.S2.R3");
                         itemsList.add(item);
                         break;
                     case 4199131:
@@ -208,6 +216,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("CocaCola");
                         item.setImageResource(R.drawable.coca_cola);
                         item.setPrice("15");
+                        item.setLocation("F1.S4.R1");
                         itemsList.add(item);
                         break;
                     case 4204131:
@@ -215,6 +224,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Everyday");
                         item.setImageResource(R.drawable.eveready_battery);
                         item.setPrice("8");
+                        item.setLocation("F2.S5.R1");
                         itemsList.add(item);
                         break;
                     case 4209131:
@@ -222,6 +232,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Galaxy");
                         item.setImageResource(R.drawable.galaxy);
                         item.setPrice("40");
+                        item.setLocation("F1.S7.R2");
                         itemsList.add(item);
                         break;
                     case 4214131:
@@ -229,6 +240,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Tropicana");
                         item.setImageResource(R.drawable.tropicana);
                         item.setPrice("25");
+                        item.setLocation("F1.S7.R1");
                         itemsList.add(item);
                         break;
                     case 4219131:
@@ -236,6 +248,7 @@ public class RetrieveItems extends AsyncTask {
                         item.setName("Vicky Ball");
                         item.setImageResource(R.drawable.vicky);
                         item.setPrice("30");
+                        item.setLocation("F2.S3.R3");
                         itemsList.add(item);
                         break;
                     default:

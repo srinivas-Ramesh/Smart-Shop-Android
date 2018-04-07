@@ -11,7 +11,12 @@ public class ItemDataModel {
     private String id;
     private String name;
     private String price;
+    private String location;
     private int imageResource;
+
+    public String getLocation() {return location;}
+
+    public void setLocation(String location) { this.location = location ;}
 
     public String getId() {
         return id;
@@ -36,7 +41,6 @@ public class ItemDataModel {
     public void setImageResource(int imageResource) {
         this.imageResource = imageResource;
     }
-
 
     public String getName() {
         return name;
